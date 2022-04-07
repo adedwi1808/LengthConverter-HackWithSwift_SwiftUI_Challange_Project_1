@@ -36,7 +36,7 @@ enum Units: String, CaseIterable {
         case .m:
             return 1
         case .km:
-            return 1000
+            return 1_000
         case .ft:
             return 0.30480000975359072823
         case .yard:
@@ -83,7 +83,7 @@ struct ContentView: View {
                     
                     
                     Section{
-                        Text(OutputLength(from: inputvalue, with: Units(rawValue: inputUnit) ?? .m, to: Units(rawValue: outputUnit) ?? .m), format: .number)
+                        Text(OutputLength(from: inputvalue, with: Units(rawValue: inputUnit) ?? .m, to: Units(rawValue: outputUnit) ?? .m).formatted())
                         
                     }header:{
                         Text("Answer")
